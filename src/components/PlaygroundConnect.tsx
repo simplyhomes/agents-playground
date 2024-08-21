@@ -46,7 +46,7 @@ const TokenConnect = ({
           <textarea
             value={token}
             onChange={(e) => setToken(e.target.value)}
-            className="text-white text-sm bg-transparent border border-gray-800 rounded-sm px-3 py-2"
+            className="text-offwhite text-sm bg-transparent border border-gray-800 rounded-sm px-3 py-2"
             placeholder="room token..."
           ></textarea>
         </div>

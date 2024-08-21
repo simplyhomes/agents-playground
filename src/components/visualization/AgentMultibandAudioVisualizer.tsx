@@ -93,7 +93,7 @@ export const AgentMultibandAudioVisualizer = ({
 
         return (
           <div
-            className={`bg-${color} ${shadow} ${
+            className={`bg-offwhite ${shadow} ${
               isCenter && state === "listening" ? "animate-pulse" : ""
             }`}
             key={"frequency-" + index}

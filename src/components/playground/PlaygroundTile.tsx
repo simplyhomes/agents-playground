@@ -32,11 +32,11 @@ export const PlaygroundTile: React.FC<PlaygroundTileProps> = ({
   const contentPadding = padding ? 4 : 0;
   return (
     <div
-      className={`flex flex-col border rounded-sm border-gray-800 text-gray-500 bg-${backgroundColor} ${className}`}
+      className={`flex flex-col  rounded-3xl  text-offwhite bg-mediumBlue ${className}`}
     >
       {title && (
         <div
-          className="flex items-center justify-center text-xs uppercase py-2 border-b border-b-gray-800 tracking-wider"
+          className="flex items-center justify-center text-xl bg-blue-100 /*uppercase*/ py-2  /*border-b-gray-800*/ tracking-wider"
           style={{
             height: `${titleHeight}px`,
           }}
@@ -71,10 +71,10 @@ export const PlaygroundTabbedTile: React.FC<PlaygroundTabbedTileProps> = ({
   }
   return (
     <div
-      className={`flex flex-col h-full border rounded-sm border-gray-800 text-gray-500 bg-${backgroundColor} ${className}`}
+      className={`flex flex-col h-full border rounded-sm /*border-gray-800*/ text-gray-500 bg-${backgroundColor} ${className}`}
     >
       <div
-        className="flex items-center justify-start text-xs uppercase border-b border-b-gray-800 tracking-wider"
+        className="flex items-center justify-start text-xl uppercase border-b /*border-b-gray-800*/ tracking-wider"
         style={{
           height: `${titleHeight}px`,
         }}
@@ -82,7 +82,7 @@ export const PlaygroundTabbedTile: React.FC<PlaygroundTabbedTileProps> = ({
         {tabs.map((tab, index) => (
           <button
             key={index}
-            className={`px-4 py-2 rounded-sm hover:bg-gray-800 hover:text-gray-300 border-r border-r-gray-800 ${
+            className={`px-4 py-2 rounded-lg hover:bg-gray-800 hover:text-gray-300 border-r border-r-gray-800 ${
               index === activeTab
                 ? `bg-gray-900 text-gray-300`
                 : `bg-transparent text-gray-500`

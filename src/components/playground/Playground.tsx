@@ -146,13 +146,13 @@ export default function Playground({
     const videoFitClassName = `object-${config.video_fit || "cover"}`;
 
     const disconnectedContent = (
-      <div className="flex items-center justify-center text-gray-700 text-center w-full h-full">
+      <div className="flex items-center justify-center text-offwhite text-center w-full h-full">
         No video track. Connect to get started.
       </div>
     );
 
     const loadingContent = (
-      <div className="flex flex-col items-center justify-center gap-2 text-gray-700 text-center h-full w-full">
+      <div className="flex flex-col items-center justify-center gap-2 text-offwhite text-center h-full w-full">
         <LoadingSVG />
         Waiting for video track
       </div>
@@ -175,7 +175,7 @@ export default function Playground({
     }
 
     return (
-      <div className="flex flex-col w-full grow text-gray-950 bg-black rounded-sm border border-gray-800 relative">
+      <div className="flex flex-col w-full grow text-offwhite bg-mediumBlue rounded-3xl /*border*/ /*border-gray-800*/ relative">
         {content}
       </div>
     );
@@ -183,13 +183,13 @@ export default function Playground({
 
   const audioTileContent = useMemo(() => {
     const disconnectedContent = (
-      <div className="flex flex-col items-center justify-center gap-2 text-gray-700 text-center w-full">
+      <div className="flex flex-col items-center justify-center gap-2 bg-mediumBlue text-offwhite font-poppins text-center w-full">
         No audio track. Connect to get started.
       </div>
     );
 
     const waitingContent = (
-      <div className="flex flex-col items-center gap-2 text-gray-700 text-center w-full">
+      <div className="flex flex-col items-center gap-2 text-offwhite text-center w-full">
         <LoadingSVG />
         Waiting for audio track
       </div>
@@ -242,7 +242,7 @@ export default function Playground({
 
   const settingsTileContent = useMemo(() => {
     return (
-      <div className="flex flex-col gap-4 h-full w-full items-start overflow-y-auto">
+      <div className="flex flex-col gap-4 h-full w-full items-start text-lg text-offwhite overflow-y-auto">
         {config.description && (
           <ConfigurationPanelItem title="Description">
             {config.description}
@@ -255,7 +255,7 @@ export default function Playground({
               <NameValueRow
                 name="Room"
                 value={name}
-                valueColor={`${config.settings.theme_color}-500`}
+                valueColor="text-offwhite"
               />
               <NameValueRow
                 name="Participant"

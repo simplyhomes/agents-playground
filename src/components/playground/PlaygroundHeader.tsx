@@ -4,7 +4,7 @@ import { SettingsDropdown } from "@/components/playground/SettingsDropdown";
 import { useConfig } from "@/hooks/useConfig";
 import { ConnectionState } from "livekit-client";
 import { ReactNode } from "react";
-
+import smartestimateLogoTemp from './smartestimateLogoTemp.png';
 type PlaygroundHeader = {
   logo?: ReactNode;
   title?: ReactNode;
@@ -27,17 +27,19 @@ export const PlaygroundHeader = ({
   const { config } = useConfig();
   return (
     <div
-      className={`flex gap-4 pt-4 text-${accentColor}-500 justify-between items-center shrink-0`}
+      className={`flex gap-4 pt-4 text-gray-500 justify-between items-center shrink-0`}
       style={{
         height: height + "px",
       }}
     >
       <div className="flex items-center gap-3 basis-2/3">
         <div className="flex lg:basis-1/2">
-          <a href="https://livekit.io">{logo ?? <LKLogo />}</a>
+          <a href="https://www.smartestimate.ai">
+            <img src="smartestimateLogoTemp.png" alt="SmartEstimate Logo"  style={{ width: '300px' }} />
+          </a>
         </div>
-        <div className="lg:basis-1/2 lg:text-center text-xs lg:text-base lg:font-semibold text-white">
-          {title}
+        <div className="lg:basis-1/2 font-poppins lg:text-center text-3xl max-lg:text-base  text-offwhite">
+          AI Agent Demo - Section 8 Sam
         </div>
       </div>
       <div className="flex basis-1/3 justify-end items-center gap-2">

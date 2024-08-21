@@ -5,12 +5,12 @@ const shades = ['50', '100', '200', '300', '400', '500', '600', '700', '800', '9
 const colorList = ['gray', 'green', 'cyan', 'amber', 'violet', 'blue', 'rose', 'pink', 'teal', "red"];
 const uiElements = ['bg', 'selection:bg', 'border', 'text', 'hover:bg', 'hover:border', 'hover:text', 'ring', 'focus:ring'];
 const customColors = {
-  cyan: colors.cyan,
-  green: colors.green,
-  amber: colors.amber,
-  violet: colors.violet,
-  blue: colors.blue,
-  rose: colors.rose,
+  offwhite: '#f4ebd9',
+  navy: '#16425b',
+  lightBlue: '#81c3d7',
+  mediumBlue: '#2f6690',
+  blue: '#3a7ca5',
+  white: colors.white,
   pink: colors.pink,
   teal: colors.teal,
   red: colors.red,
@@ -58,7 +58,7 @@ module.exports = {
       current: 'currentColor',
       black: colors.black,
       white: colors.white,
-      gray: colors.neutral,
+      gray: colors.gray,
       ...customColors
     },
     extend: {
@@ -67,6 +67,9 @@ module.exports = {
       },
       boxShadow: {
         ...customShadows,
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
       }
     }
   },
